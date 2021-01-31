@@ -6,17 +6,17 @@
     "publisher": "dwkns",
     "license": "MIT",
     "author": {
-        "name": "Matthew Blode",
-        "email": "m@blode.co",
-        "url": "https://matthewblode.com"
+        "name": "dwkns",
+        "email": "dwkns@me.com",
+        "url": "https://dwkns.com"
     },
-    "homepage": "https://github.com/mblode/vscode-twig-language",
+    "homepage": "https://github.com/dwkns/vscode-njk-extension",
     "bugs": {
-        "url": "https://github.com/mblode/vscode-twig-language/issues"
+        "url": "https://github.com/dwkns/vscode-njk-extension/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/mblode/vscode-twig-language.git"
+        "url": "https://github.com/dwkns/vscode-njk-extension.git"
     },
     "icon": "images/icon.png",
     "engines": {
