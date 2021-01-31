@@ -1,0 +1,110 @@
+{
+    "name": "njk-language",
+    "displayName": "NJK Language",
+    "description": "Snippets, Syntax Highlighting, Hover, and Formatting for NJK",
+    "version": "0.0.1",
+    "publisher": "dwkns",
+    "license": "MIT",
+    "author": {
+        "name": "Matthew Blode",
+        "email": "m@blode.co",
+        "url": "https://matthewblode.com"
+    },
+    "homepage": "https://github.com/mblode/vscode-twig-language",
+    "bugs": {
+        "url": "https://github.com/mblode/vscode-twig-language/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mblode/vscode-twig-language.git"
+    },
+    "icon": "images/icon.png",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "php",
+        "twig",
+        "snippets",
+        "craft",
+        "beautify"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./extension/index",
+    "contributes": {
+        "tokenColors": [
+            {
+                "name": "Nunjcks",
+                "scope": [
+                    "text.html.njk meta.tag.template.block.njk punctuation.section.tag.njk"
+                ],
+                "settings": {
+                    "foreground": "#e9ab00"
+                }
+            }
+        ],
+        "languages": [
+            {
+                "id": "html",
+                "aliases": [
+                    "HTML",
+                    "nunjucks",
+                    "njk"
+                ],
+                "extensions": [
+                  
+                    ".html",
+                    ".njk"
+                   
+                ],
+                "configuration": "./src/languages/twig.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "html",
+                "scopeName": "text.html.njk",
+                "path": "./src/syntaxes/njk.tmLanguage",
+                "embeddedLanguages": {
+                    "source.json": "json",
+                    "source.css": "css",
+                    "source.css.scss": "scss",
+                    "source.js": "javascript",
+                    "source.ts": "typescript"
+                }
+            }
+        ],
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./src/snippets/snippets.json"
+            }
+        ]
+    },
+    "scripts": {
+        "start": "rollup -c",
+        "build": "rollup -c",
+        "watch": "rollup -c -w"
+    },
+    "devDependencies": {
+        "@types/mocha": "^8.0.3",
+        "@types/node": "^14.6.0",
+        "eslint": "^7.7.0",
+        "eslint-config-prettier": "^6.11.0",
+        "typescript": "^4.0.2",
+        "vscode": "^1.1.37"
+    },
+    "dependencies": {
+        "prettydiff": "^101.2.6",
+        "rollup": "^2.26.5",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-json": "^4.0.0"
+    }
+}
