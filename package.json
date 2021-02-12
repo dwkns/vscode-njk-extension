@@ -39,17 +39,7 @@
     ],
     "main": "./extension/index",
     "contributes": {
-        "tokenColors": [
-            {
-                "name": "Nunjcks",
-                "scope": [
-                    "text.html.njk meta.tag.template.block.njk punctuation.section.tag.njk"
-                ],
-                "settings": {
-                    "foreground": "#e9ab00"
-                }
-            }
-        ],
+
         "languages": [
             {
                 "id": "html",
@@ -59,12 +49,11 @@
                     "njk"
                 ],
                 "extensions": [
-                  
                     ".html",
                     ".njk"
                    
                 ],
-                "configuration": "./src/languages/twig.configuration.json"
+                "configuration": "./src/languages/njk.configuration.json"
             }
         ],
         "grammars": [
